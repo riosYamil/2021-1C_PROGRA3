@@ -1,6 +1,7 @@
 package src.main.java;
 
-import PalabraDistancias.MejorDistancia;
+import src.main.java.PalabraDistancias.MejorDistancia;
+
 import java.util.Vector;
 
 public class Principal {
