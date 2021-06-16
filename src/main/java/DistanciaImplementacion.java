@@ -10,6 +10,7 @@ import java.util.Vector;
 public class DistanciaImplementacion implements Distancia {
     @Override
     public MejorDistancia calcularDistancia(String origen, Vector<String> candidatas) {
+        long startTime = System.currentTimeMillis();
 
         int cantidadDePalabras = candidatas.size();
         int i = 0;
@@ -25,6 +26,8 @@ public class DistanciaImplementacion implements Distancia {
 
             i = i + 1;
         }
+        long estimatedTime = System.currentTimeMillis() - startTime;
+        System.out.println(origen.length() + "," + cantidadDePalabras + "," + estimatedTime);
         return res;
     }
 

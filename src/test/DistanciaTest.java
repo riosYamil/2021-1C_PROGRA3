@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import src.main.java.DistanciaImplementacion;
 import src.main.java.PalabraDistancias.MejorDistancia;
+
 import java.util.Vector;
 
 public class DistanciaTest {
@@ -54,7 +55,7 @@ public class DistanciaTest {
 
         //Verifico
         Assert.assertEquals(2, mejorDistancia.distancia);
-        Assert.assertEquals("ar", mejorDistancia.palabra);
+        Assert.assertEquals("er", mejorDistancia.palabra);
     }
 
     @Test
@@ -109,4 +110,105 @@ public class DistanciaTest {
         Assert.assertEquals(1, mejorDistancia.distancia);
         Assert.assertEquals("cantar", mejorDistancia.palabra);
     }
+
+    @Test
+    public void testMedicionI() {
+        //Inicializo variables de entrada
+        String origen = "a";
+        Vector<String> vectorPalabras = new Vector<>();
+        vectorPalabras.add("1234567890");
+        vectorPalabras.add("1234567890");
+        vectorPalabras.add("1234567890");
+        vectorPalabras.add("1234567890");
+        vectorPalabras.add("1234567890");
+
+        //Ejecuto la función calcularDistancia
+        MejorDistancia mejorDistancia;
+        DistanciaImplementacion distanciaImp = new DistanciaImplementacion();
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+
+        distanciaImp.calcularDistancia("aaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaaaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaaaaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaaaaaaaaaaa", vectorPalabras);
+        distanciaImp.calcularDistancia("aaaaaaaaaaaaaaaaaaaa", vectorPalabras);
+    }
+
+    @Test
+    public void testMedicionII() {
+        //Inicializo variables de entrada
+        String origen = "1234567890";
+        Vector<String> vectorPalabras = new Vector<>();
+        vectorPalabras.add("aaaaaaaaaa");
+
+        //Ejecuto la función calcularDistancia
+        MejorDistancia mejorDistancia;
+        DistanciaImplementacion distanciaImp = new DistanciaImplementacion();
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+
+
+        for (int i = 0; i < 1000; i++) {
+            vectorPalabras.add("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        }
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+
+        for (int i = 0; i < 1000; i++) {
+            vectorPalabras.add("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        }
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+
+        for (int i = 0; i < 1000; i++) {
+            vectorPalabras.add("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        }
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+
+        for (int i = 0; i < 1000; i++) {
+            vectorPalabras.add("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        }
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+
+        for (int i = 0; i < 1000; i++) {
+            vectorPalabras.add("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        }
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+
+        for (int i = 0; i < 1000; i++) {
+            vectorPalabras.add("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        }
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+
+        for (int i = 0; i < 1000; i++) {
+            vectorPalabras.add("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        }
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+
+        for (int i = 0; i < 1000; i++) {
+            vectorPalabras.add("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        }
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+
+        for (int i = 0; i < 1000; i++) {
+            vectorPalabras.add("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        }
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+
+        for (int i = 0; i < 1000; i++) {
+            vectorPalabras.add("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        }
+        distanciaImp.calcularDistancia(origen, vectorPalabras);
+    }
+    
+    
 }
